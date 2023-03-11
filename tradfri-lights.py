@@ -29,7 +29,7 @@ from __future__ import unicode_literals
 
 import os
 import sys
-import ConfigParser
+import configparser
 import argparse
 from textwrap import wrap
 
@@ -52,7 +52,7 @@ def parse_args():
 def main():
     """ main function """
     args = parse_args()
-    conf = ConfigParser.ConfigParser()
+    conf = configparser.configparser()
     script_dir = os.path.dirname(os.path.realpath(__file__))
     conf.read(script_dir + '/tradfri.cfg')
 

@@ -24,13 +24,13 @@ from __future__ import unicode_literals
 import os
 import sys
 import time
-import ConfigParser
+import configparser
 
 from tradfri import tradfriActions
 
 def main():
     """ main function """
-    conf = ConfigParser.ConfigParser()
+    conf = configparser.configparser()
     script_dir = os.path.dirname(os.path.realpath(__file__))
     conf.read(script_dir + '/tradfri.cfg')
 
